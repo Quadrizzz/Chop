@@ -1,0 +1,289 @@
+body{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 20px;
+}
+
+.menu{
+    display: none;
+}
+
+
+header button{
+    border: thin solid transparent;
+    padding: 5px 10px 5px 10px;
+    width: 80px;
+    border-radius: 10px;
+    outline: none;
+    color:#f16e32;
+    font-size: small;
+    background: white;
+    box-shadow: 0px 3px 3px 0px grey;
+    transition:.5s all ease-in-out;
+}
+header button:hover{
+    background: #f16e32;
+    color: white;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+
+
+.newsletter{
+    background: url("../images/back2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 900px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f16e32;
+    font-size: medium;
+}
+
+.newsletter h1, .newsletter h3{
+    margin-left: 220px;
+}
+
+
+.card{
+    box-shadow: 5px 5px 7px grey;
+    background-image: url("../images/back3.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    font-weight: lighter;
+    width: 300px;
+    height: 500px;
+    margin-left: 70px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:#f16e32;
+}
+
+.card h1{
+    align-self: center;   
+}
+
+.card form h3{
+    font-size: large;
+}
+
+.card form input{
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 10px;
+    height: 30px;
+    width: 250px;
+    font-size: small;
+    color: #f16e32;
+}
+
+.card form input:focus{
+    outline: none;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #f16e32;
+}
+
+.card form button{
+    width: 120px;
+    padding: 10px 10px 10px 10px;
+    font-size: small;
+    font-weight: lighter;
+    border-width: thin;
+    border-color: transparent;
+    background-color: white;
+    border-radius: 10px;
+    color: #f16e32;
+    box-shadow: 0px 3px 3px 0px grey;
+    transition:.5s all ease-in-out;
+    outline: none;
+}
+
+.card form button:hover{
+    background: #f16e32;
+    color: white;
+}
+
+.subcontainer{
+    display: none;
+}
+
+footer{
+    display: none;
+}
+
+@media only screen and (max-width:1024px){
+
+  body{
+      padding: 0;
+      margin: 0;
+  }
+    
+  header{
+    display: none;
+  }
+
+  .subcontainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: -5%;
+      padding-right: 10px;
+      padding-left: 10px;
+      box-shadow: 0px 0px 5px grey;
+  }
+
+  .subcontainer img{
+      height: auto;
+      width: 20%;
+  }
+
+  #sandwich{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .bar{
+      background: #f16e32;
+      color: transparent;
+      height: 5px;
+      border-radius: 5px;
+      margin-bottom: 4px;
+      width: 100%;
+  }
+
+
+  .menu{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: #f16e32;
+      width: 100%;
+      margin-left: 4.7%;
+      border-radius: 10px;
+  }
+
+  .menu_show{
+    display: flex;
+    transition: .5s all ease-in-out;
+}
+
+
+  .menu a{
+      color: white;
+  }
+
+  #container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url(../images/back2.jpg);
+      background-color:rgb(218, 199, 199) ;
+      background-blend-mode: color-burn;
+      background-position: center;
+      background-size: cover;
+      margin-right: -5%;
+      margin-top: 0;
+      padding: 0px 5px 0px 5px;
+  }
+
+  .newsletter{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+      background: transparent;
+      width: 100%;
+      border-radius: 0;
+      color: white;
+      text-shadow: 0px 0px 5px rgb(218, 199, 199);
+      font-size: large;
+      align-self: center;
+      
+  }
+
+  .newsletter h1, .newsletter h3{
+    margin-left: 0;
+    text-align: center;
+}
+
+  footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: thin none transparent;
+      margin-right: -5%;
+      color: #f16e32;
+      box-shadow: 0px -1px 0px grey;
+      padding-bottom: 10px;
+  }
+
+  footer input{
+      border: thin none transparent;
+      padding: 0px 0px 0px 5px;
+      font-size: medium;
+
+  }
+
+  footer input:focus{
+    outline: none;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #f16e32;
+}
+
+  footer button{
+      width: 50%;
+      height: auto;
+      font-size: medium;
+      margin-top: 20px;
+      border: thin none transparent;
+      background: #f16e32;
+      border-radius: 20px;
+      padding: 10px 0px 10px 0px;
+      color: white;
+  }
+
+  footer h2{
+      text-align: center;
+  }
+
+  .card{
+      display: none;
+  }
+}

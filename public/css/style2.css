@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
+    background-size: cover;
+}
+
+#container{
+    height: 657px;
+    width: 100%;
+    /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
+    background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container form input{
+    width: 500px;
+    height: 50px;
+    background-color: rgb(221, 215, 215);
+    border-radius: 30px;
+    padding: 15px;
+    border-width: thin;
+    border-color: transparent;
+    font-size: medium;
+    backdrop-filter:50px;
+}
+
+#container form input:focus{
+    outline: none;
+}
+
+#container form button{
+    height: 45px;
+    width: 100px;
+    margin-left: 10px;
+    border-width: thin;
+    border-color: transparent;
+    font-size: large;
+    border-radius: 30px;
+    background:linear-gradient(rgb(195, 0, 255),rgb(238, 52, 145));
+    color: white;
+    outline: none;
+}
+
+@media only screen and (max-width:1024px){
+    #container{
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #container form input{
+        width: 70vw;
+        height: 50px;
+        background-color: rgb(221, 215, 215);
+        border-radius: 10px;
+        padding: 15px;
+        border-width: thin;
+        border-color: transparent;
+        font-size: medium;
+        backdrop-filter:50px;
+    }
+
+    #container form button{
+        height: 45px;
+        width: 100px;
+        margin-left: 10px;
+        border-width: thin;
+        display:none;
+        border-color: transparent;
+        font-size: large;
+        border-radius: 30px;
+        background:linear-gradient(rgb(195, 0, 255),rgb(238, 52, 145));
+        color: white;
+        outline: none;
+    }
+    
+    #continer h3{
+        align-self: center;
+        margin-left: 50px;
+    }
+}
