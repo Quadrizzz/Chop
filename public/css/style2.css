@@ -1,96 +1,138 @@
-*{
-    box-sizing: border-box;
-}
-
-
 body{
-    margin: 0;
+    background-color: white;
     padding: 0;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
-    background-size: cover;
+    margin: 0;
+    font-family:'Poppins', sans-serif;;
 }
 
-#container{
-    height: 657px;
-    width: 100%;
-    /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
-    background-size: cover; */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.menu{
+    display: none;
+}
+
+.subcontainer{
+    display: none;
+}
+
+
+header button{
+    border: thin solid transparent;
+    padding: 5px 10px 5px 10px;
+    width: 80px;
+    border-radius: 10px;
+    outline: none;
+    color:#f16e32;
+    font-size: small;
+    background: white;
+    box-shadow: 0px 3px 3px 0px grey;
+    transition:.5s all ease-in-out;
+}
+header button:hover{
+    background: #f16e32;
+    color: white;
+}
+
+.main{
+    background: url(../images/back1.jpg);
+    background-color: grey;
+    background-blend-mode: color-burn;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#container form input{
-    width: 500px;
-    height: 50px;
-    background-color: rgb(221, 215, 215);
-    border-radius: 30px;
-    padding: 15px;
-    border-width: thin;
-    border-color: transparent;
-    font-size: medium;
-    backdrop-filter:50px;
-}
-
-#container form input:focus{
-    outline: none;
-}
-
-#container form button{
-    height: 45px;
-    width: 100px;
-    margin-left: 10px;
-    border-width: thin;
-    border-color: transparent;
-    font-size: large;
-    border-radius: 30px;
-    background:linear-gradient(rgb(195, 0, 255),rgb(238, 52, 145));
+    text-align: center;
+    margin-top: 2px;
     color: white;
-    outline: none;
 }
+
+.main h1{
+    font-weight: 700;
+    font-size: 50pt;
+}
+
+.main p{
+    font-weight: 400;
+    font-size: large;
+}
+
 
 @media only screen and (max-width:1024px){
-    #container{
-        height: 100vh;
-        width: 100vw;
-        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/back4.jpg");
-        background-size: cover;
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+      
+    header{
+      display: none;
+    }
+  
+    .subcontainer{
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-right: -5%; */
+        padding-right: 1%;
+        padding-left: 0px;
+        box-shadow: 0px 0px 5px grey;
+    }
+  
+    .subcontainer img{
+        height: auto;
+        width: 20%;
+    }
+  
+    #sandwich{
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  
+    .bar{
+        background: #f16e32;
+        color: transparent;
+        height: 5px;
+        border-radius: 5px;
+        margin-bottom: 4px;
+        width: 100%;
+    }
+  
+  
+    .menu{
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
-    }
-
-    #container form input{
-        width: 70vw;
-        height: 50px;
-        background-color: rgb(221, 215, 215);
-        border-radius: 10px;
-        padding: 15px;
-        border-width: thin;
-        border-color: transparent;
-        font-size: medium;
-        backdrop-filter:50px;
-    }
-
-    #container form button{
-        height: 45px;
-        width: 100px;
-        margin-left: 10px;
-        border-width: thin;
-        display:none;
-        border-color: transparent;
-        font-size: large;
-        border-radius: 30px;
-        background:linear-gradient(rgb(195, 0, 255),rgb(238, 52, 145));
         color: white;
-        outline: none;
+        background: #f16e32;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 3%;
+        border-radius: 10px;
     }
-    
-    #continer h3{
-        align-self: center;
-        margin-left: 50px;
+  
+    .menu_show{
+      display: flex;
+      transition: .5s all ease-in-out;
+  }
+  
+  
+    .menu a{
+        color: white;
     }
 }
