@@ -40,63 +40,72 @@ header button:hover{
     color: white;
 }
 
-.main{
-    background: url(../images/back1.jpg);
-    background-color: grey;
-    background-blend-mode: color-burn;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
+.recipe-form{
+    width: 60%;
+    padding: 10px 0px 30px 200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
-    margin-top: 2px;
-    color: white;
-    
-}
-
-.main h1{
-    font-weight: 700;
-    font-size: 50pt;
-}
-
-.main p{
-    font-weight: 400;
-    font-size: large;
-}
-
-footer{
+    text-align: left;
     background: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px 0 20px;
+    border-radius: 10px;
+    margin-left: 13%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
-footer img{
-    height: 80px;
-    width: 5%;
+.recipe-form button{
+    margin-top: 15px;
+    align-self: flex-start;
+    border: thin solid transparent;
+    padding: 5px 10px 5px 10px;
+    width: 80px;
+    border-radius: 10px;
+    outline: none;
+    color:#f16e32;
+    font-size: small;
+    background: white;
+    box-shadow: 0px 3px 3px 0px grey;
+    transition:.5s all ease-in-out;
+
 }
 
-footer h3{
-    font-weight: 700;
-    color: #f16e32;
-    text-align: center;
+.recipe-form button:hover{
+    background: #f16e32;
+    color: white;
 }
 
-footer p{
+.recipe-form p{
     font-weight: 400;
-    text-align: center;
-    color: #f08e61;
+    font-size: larger;
+    color: #f16e32;
+}
+
+.recipe-form label{
+    color: #f18e61;
     font-size: small;
 }
 
 
-@media only screen and (max-width:1024px){
+#food{
+    width: 30%;
+    border: thin solid #f18e61;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    outline: none;
+}
 
+
+
+@media only screen and (max-width:1024px){
     body{
         padding: 0;
         margin: 0;
@@ -162,48 +171,5 @@ footer p{
   
     .menu a{
         color: white;
-    }
-
-    .main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        /* padding: 0px 10px 0px 10px; */
-    }
-
-    .main h1{
-        font-weight: 700;
-        font-size: 200%;
-    }
-    
-    .main p{
-        font-weight: 400;
-        font-size: large;
-    }
-
-    footer{
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 20px 0 20px;
-    }
-    
-    
-    footer h3{
-        font-weight: 700;
-        color: #f16e32;
-        font-size: 150%;
-        text-align: center;
-    }
-    
-    footer p{
-        font-weight: 400;
-        text-align: center;
-        color: #f08e61;
-        font-size: 100%;
     }
 }

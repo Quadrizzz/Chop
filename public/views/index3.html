@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library</title>
+        <link rel="stylesheet" href="../css/style3.css">
+        <script src="../js/script.js"></script>
+        <script src="../js/script2.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <img src="../images/logo.png" alt="" srcset="" height="50px" >
+            <div>
+                <a href="./index.html"><button>Home</button></a>
+                <a href="#"><button>Blog</button></a>
+                <a href="#"><button>Library</button></a>
+                <a href="index2.html"><button>Contacts</button></a>
+            </div>   
+        </header>
+        <div class="subcontainer">
+            <img src="../images/logo.png" alt="" srcset="">
+            <div id="sandwich">
+                <div class="bar">.</div>
+                <div class="bar">.</div>
+                <div class="bar">.</div>
+            </div>
+        </div>
+
+        <div class="menu" id = "menu"> 
+            <p><a href="./index.html">Home</a></p>
+            <p><a href="#">Blog</a></p>
+            <p><a href="#">Library</a></p>
+            <p><a href="./index2.html">Contacts</a></p>  
+        </div>
+
+        <div class = "recipe-form">
+            <p>Recipe For :</p>
+            <input id = "food" type = "text" placeholder = "What are you trying to cook ?" required>
+            <div>
+                <p>Cuisines :</p>
+                <input type="checkbox" class = "cuisine" name = "african" value="african," onclick="cuisine_check()">
+                <label for="african">African</label>
+                <input type="checkbox" class = "cuisine" name = "american" value="american," onclick="cuisine_check()">
+                <label for="american">American</label>
+                <input type="checkbox" class = "cuisine" name = "british" value="british," onclick="cuisine_check()">
+                <label for="british">British</label>
+                <input type="checkbox" class = "cuisine" name = "caribbean" value="caribbean," onclick="cuisine_check()">
+                <label for="caribbean">Caribbean</label>
+                <input type="checkbox" class = "cuisine" name = "chinese" value="chinese," onclick="cuisine_check()">
+                <label for="chinese">Chinese</label>
+                <input type="checkbox" class = "cuisine" name = "french" value="french," onclick="cuisine_check()">
+                <label for= "french">French</label><br></br>
+                <input type="checkbox" class = "cuisine" name = "german" value="german," onclick="cuisine_check()">
+                <label for="german">German</label>
+                <input type="checkbox" class = "cuisine" name = "greek" value="greek," onclick="cuisine_check()">
+                <label for="greek">Greek</label>
+                <input type="checkbox" class = "cuisine" name = "indian" value="indian," onclick="cuisine_check()">
+                <label for="indian">Indian</label>
+                <input type="checkbox" class = "cuisine" name = "japanese" value="japanese," onclick="cuisine_check()">
+                <label for="japanese">Japanese</label>
+                <input type="checkbox" class = "cuisine" name = "korean" value="korean," onclick="cuisine_check()">
+                <label for="korean">Korean</label>
+                <input type="checkbox" class = "cuisine" name = "mexican" value="mexican," onclick="cuisine_check()">
+                <label for="mexican">Mexican</label>
+                <input type="checkbox" class = "cuisine" name = "spanish" value="spanish," onclick="cuisine_check()">
+                <label for="spanish">Spanish</label>
+                <input type="checkbox" class = "cuisine" name = "thai" value="thai," onclick="cuisine_check()">
+                <label for="thai">Thai</label>
+            </div>
+
+            <div>
+                <p>Diets :</p>
+                <input type= "checkbox" class = "diet" name = "gluten-free" value="glutenfree," onclick="diet_check()">
+                <label for = "gluten-free">Gluten Free</label>
+                <input type= "checkbox" class = "diet" name = "ketogenic" value="ketogenic," onclick="diet_check()">
+                <label for = "ketogenic">Ketogenic</label>
+                <input type= "checkbox" class = "diet" name = "vegetarian" value="vegetarian," onclick="diet_check()">
+                <label for = "vegetarian">Vegetarian</label>
+                <input type= "checkbox" class = "diet" name = "lacto-vegetarian" value="lactovegetarian," onclick="diet_check()">
+                <label for = "lacto-vegetarian">Lacto Vegetarian</label>
+                <input type= "checkbox" class = "diet" name = "ovo-vegetarian" value="ovovegetarian," onclick="diet_check()">
+                <label for = "ovo-vegetarian">Ovo Vegetarian</label><br></br>
+                <input type= "checkbox" class = "diet" name = "vegan" value="vegan," onclick="diet_check()">
+                <label for = "vegan">Vegan</label>
+                <input type= "checkbox" class = "diet" name = "pescetarian" value="pescetarian," onclick="diet_check()">
+                <label for = "pescetarian">Pescetarian</label>
+                <input type= "checkbox" class = "diet" name = "paleo" value="paleo," onclick="diet_check()">
+                <label for = "paleo">Paleo</label>
+                <input type= "checkbox" class = "diet" name = "primal" value="primal," onclick="diet_check()">
+                <label for = "primal">Primal</label>
+                <input type= "checkbox" class = "diet" name = "whole30" value="whole30," onclick="diet_check()">
+                <label for = "whole30">Whole30</label>
+            </div>
+
+            <div>
+                <p>Intolerance :</p>
+                <div>
+                <input type= "checkbox" name="dairy" value="dairy,">
+                <label for="dairy">Dairy</label>
+                <input type= "checkbox" name="egg" value="egg,">
+                <label for="egg">Egg</label>
+                <input type= "checkbox" name="gluten" value="gluten,">
+                <label for="gluten">Gluten</label>
+                <input type= "checkbox" name="grain" value="grain,">
+                <label for="grain">Grain</label>
+                <input type= "checkbox" name="peanut" value="peanut,">
+                <label for="peanut">Peanut</label>
+                <input type= "checkbox" name="seafood" value="seafood,">
+                <label for="seafood">Seafood</label>
+                <input type= "checkbox" name="soy" value="soy,">
+                <label for="soy">Soy</label>
+                <input type= "checkbox" name="sulfite" value="sulfite,">
+                <label for="sulfite">Sulfite</label>
+                </div>
+            </div>
+
+            <div>
+                <p>Types :</p>
+                <div>
+                    <input type="radio" id= "maincourse" name="type" value="maincourse" onclick="check()">
+                    <label for="maincourse">Main-course</label>
+                    <input type="radio" id= "sidedish" name="type" value="sidedish" onclick="check()">
+                    <label for="sidedish">Side-dish</label>
+                    <input type="radio" id= "dessert" name="type" value="dessert" onclick="check()">
+                    <label for="dessert">Dessert</label>
+                    <input type="radio" id= "appetizer" name="type" value="appetizer" onclick="check()">
+                    <label for="appetizer">Appetizer</label>
+                    <input type="radio" id= "salad" name="type" value="salad" onclick="check()">
+                    <label for="salad">Salad</label>
+                    <input type="radio" id= "bread" name="type" value="bread" onclick="check()">
+                    <label for="bread">Bread</label>
+                    <input type="radio" id= "breakfast" name="type" value="breakfast" onclick="check()">
+                    <label for="breakfast">Breakfast</label><br></br>
+                    <input type="radio" id= "soup" name="type" value="soup" onclick="check()">
+                    <label for="soup">Soup</label>
+                    <input type="radio" id= "beverage" name="type" value="beverage" onclick="check()">
+                    <label for="beverage">Beverage</label>
+                    <input type="radio" id= "sauce" name="type" value="sauce" onclick="check()">
+                    <label for="sauce">Sauce</label>
+                    <input type="radio" id= "marinade" name="type" value="marinade" onclick="check()">
+                    <label for="marinade">Marinade</label>
+                    <input type="radio" id= "fingerfood" name="type" value="fingerfood" onclick="check()">
+                    <label for="fingerfood">Fingerfood</label>
+                    <input type="radio" id= "snack" name="type" value="snack" onclick="check()">
+                    <label for="snack">Snack</label>
+                    <input type="radio" id= "drink" name="type" value="drink" onclick="check()">
+                    <label for="drink">Drink</label>
+                </div>
+            </div>
+
+            <button>Submit</button>
+        </div>
+
+
+    </body>
+
+</html>
