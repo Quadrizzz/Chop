@@ -96,6 +96,13 @@ const submit = ()=>{
     })
     .then (response =>{ return response.json()})
     .then(
-        data=> console.log(data)
-    )
+        data=>{ result = data
+        }
+    ), show_result();
+}
+
+const show_result = ()=>{
+    if(result){
+    console.log(result.results)
+    }
 }
