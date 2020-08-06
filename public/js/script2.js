@@ -6,6 +6,16 @@ var radio = document.getElementsByName("type");
 var cuisine = document.getElementsByClassName("cuisine")
 var diet = document.getElementsByClassName("diet")
 var intolerance = document.getElementsByClassName("Intolerance") 
+var query = ""
+var result = null
+window.onload = ()=>{
+    var queries =  document.getElementById("food")
+    queries.addEventListener('change', change)
+}
+const change = (e)=>{
+    query = e.target.value
+    // console.log(query)
+}
 
 const check = ()=>{
     for(var i = 0; i < radio.length ; i++ ){
@@ -78,6 +88,14 @@ const intolerance_check = ()=>{
 }
 
 const submit = ()=>{
-    console.log(`diets are ${diets} \n intolerances are : ${intolerances} \n cuisines are : ${cuisines}
-     type is : ${types}`)
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=aae02a4ef3b6414e9ab9368146f92356&query=${query}&cusine=${cuisines.slice(0,-1)}&diet=${diets.slice(0,-1)}&intolerances=${intolerances.slice(0,-1)}&type=${types}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then (response =>{ return response.json()})
+    .then(
+        data=> console.log(data)
+    )
 }
