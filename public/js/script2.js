@@ -1,18 +1,18 @@
 var diets =""
 var cuisines=""
-var intolerance=""
+var intolerances =""
 var types = null
 var radio = document.getElementsByName("type");
 var cuisine = document.getElementsByClassName("cuisine")
 var diet = document.getElementsByClassName("diet")
-var intolerances
+var intolerance = document.getElementsByClassName("Intolerance") 
 
 const check = ()=>{
     for(var i = 0; i < radio.length ; i++ ){
         if ( radio[i].checked){
             types = radio[i].value
         }
-    }
+    } 
     
     console.log(types)
 }
@@ -55,4 +55,29 @@ const diet_check = ()=>{
     }
 
     console.log(diets)
+}
+
+const intolerance_check = ()=>{
+    for(var i = 0; i < intolerance.length ; i++){
+
+        if(!intolerance[i].checked){
+            if(intolerances.includes(intolerance[i].value) === true){
+               intolerances = intolerances.replace(intolerance[i].value, "")
+            }
+        }
+
+        else if(intolerance[i].checked){
+            if(intolerances.includes(intolerance[i].value) === false)
+                intolerances += intolerance[i].value
+        }
+        
+
+    }
+
+    console.log(intolerances)
+}
+
+const submit = ()=>{
+    console.log(`diets are ${diets} \n intolerances are : ${intolerances} \n cuisines are : ${cuisines}
+     type is : ${types}`)
 }
