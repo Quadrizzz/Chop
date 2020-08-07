@@ -11,6 +11,7 @@ var result = null
 window.onload = ()=>{
     var queries =  document.getElementById("food")
     queries.addEventListener('change', change)
+    document.getElementById("clear-button").addEventListener('click', clear)
 }
 const change = (e)=>{
     query = e.target.value
@@ -23,8 +24,7 @@ const check = ()=>{
             types = radio[i].value
         }
     } 
-    
-    console.log(types)
+
 }
 
 const cuisine_check = ()=>{
@@ -42,8 +42,6 @@ const cuisine_check = ()=>{
         }
     }
 
-    // cuisines = cuisines.substring(0 , cuisines.length -1);
-    console.log(cuisines)
 }
 
 
@@ -64,7 +62,6 @@ const diet_check = ()=>{
 
     }
 
-    console.log(diets)
 }
 
 const intolerance_check = ()=>{
@@ -84,10 +81,12 @@ const intolerance_check = ()=>{
 
     }
 
-    console.log(intolerances)
 }
 
 const submit = ()=>{
+    var form = document.getElementById("recipe-form");
+    form.style.display = "none";
+    document.getElementById("animation").style.display = "flex";
     fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=aae02a4ef3b6414e9ab9368146f92356&query=${query}&cusine=${cuisines.slice(0,-1)}&diet=${diets.slice(0,-1)}&intolerances=${intolerances.slice(0,-1)}&type=${types}`,{
         method: 'GET',
         headers: {
@@ -96,13 +95,35 @@ const submit = ()=>{
     })
     .then (response =>{ return response.json()})
     .then(
-        data=>{ result = data
+        data=>{ result = data;
+                show_result()
+
         }
-    ), show_result();
+    )
 }
 
 const show_result = ()=>{
-    if(result){
-    console.log(result.results)
-    }
+    var display = document.getElementById('recipe-results')
+    display.style.display = "flex"
+    document.getElementById("animation").style.display = "none";
+    result.results.map((data , i)=>{
+        let div = document.createElement('div');
+        div.id =  result.results[i].id
+        let image = document.createElement('img');
+        image.src = `${result.results[i].image}`;
+        let text = document.createElement('h3');
+        text.innerHTML = `${result.results[i].title}`;
+        div.appendChild(text)
+        div.appendChild(image)
+        display.appendChild(div)
+    })
 }
+
+const clear = ()=>{
+    result = null;
+    document.getElementById("recipe-results").style.display = "none"
+    document.getElementById("recipe-form").style.display = "flex";
+    // console.log("hello")
+}
+
+
