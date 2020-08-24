@@ -89,11 +89,11 @@ header button:hover{
     align-self: center;   
 }
 
-.card form h3{
+.card .form h3{
     font-size: large;
 }
 
-.card form input{
+.card .form input{
     border-color: transparent;
     background-color: transparent;
     padding-left: 10px;
@@ -103,14 +103,14 @@ header button:hover{
     color: #f16e32;
 }
 
-.card form input:focus{
+.card .form input:focus{
     outline: none;
     border-bottom-style: solid;
     border-bottom-width: thin;
     border-bottom-color: #f16e32;
 }
 
-.card form button{
+.card .form button{
     width: 120px;
     padding: 10px 10px 10px 10px;
     font-size: small;
@@ -125,7 +125,7 @@ header button:hover{
     outline: none;
 }
 
-.card form button:hover{
+.card .form button:hover{
     background: #f16e32;
     color: white;
 }

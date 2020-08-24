@@ -104,7 +104,7 @@ const submit = ()=>{
 
 const show_result = ()=>{
     var display = document.getElementById('recipe-results')
-    display.style.display = "flex"
+    display.style.display = "grid"
     document.getElementById("animation").style.display = "none";
     result.results.map((data , i)=>{
         let div = document.createElement('div');
