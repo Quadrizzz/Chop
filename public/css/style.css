@@ -66,6 +66,10 @@ header button:hover{
     margin-left: 220px;
 }
 
+.message{
+    display: none;
+}
+
 
 .card{
     box-shadow: 5px 5px 7px grey;
@@ -254,6 +258,10 @@ footer{
       color: #f16e32;
       box-shadow: 0px -1px 0px grey;
       padding-bottom: 10px;
+  }
+
+  .message{
+      display: none;
   }
 
   footer input{

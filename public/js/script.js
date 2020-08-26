@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded" , ()=>{
             )
             .then(response => {
                 if(response.status !== 200){
-                    console.log('failure')
+                    document.getElementsByClassName("message")[0].style.display = "none"
                 }
                 else{
-                    console.log('successful')
+                    document.getElementsByClassName("message")[0].style.display = "flex"
                 }
             })
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
                     console.log('failure')
                 }
                 else{
-                    console.log('successful')
+                    document.getElementsByClassName("message")[1].style.display = "flex"
                 }
             })
 
