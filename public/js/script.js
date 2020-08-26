@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
             console.log("malik")
         }
         else{
-            fetch('http://localhost:3000/register',
+            fetch('https://blooming-sea-31036.herokuapp.com/register',
             {
                 headers: {
                     'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded" , ()=>{
             console.log("malik")
         }
         else{
-            fetch('http://localhost:3000/register',
+            fetch('https://blooming-sea-31036.herokuapp.com/register',
             {
                 headers: {
                     'Content-Type': 'application/json'
