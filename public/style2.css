@@ -41,7 +41,7 @@ header button:hover{
 }
 
 .main{
-    background: url(../images/back1.jpg);
+    background: url(./back1.jpg);
     background-color: grey;
     background-blend-mode: color-burn;
     background-position: center;
